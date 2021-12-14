@@ -26,7 +26,7 @@ import java.util.concurrent.Executor;
 @AllArgsConstructor
 public class CustomConnection implements Connection {
     private Connection realConnection;
-    private Queue<CustomConnection> pool;
+    private Queue<Connection> pool;
 
     @Override
     public Statement createStatement() throws SQLException {

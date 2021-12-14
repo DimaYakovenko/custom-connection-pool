@@ -12,7 +12,7 @@ import java.util.concurrent.LinkedBlockingDeque;
 public class PooledDataSource extends PGSimpleDataSource {
 
     private DataSource dataSource;
-    private Queue<CustomConnection> pool = new LinkedBlockingDeque<>();
+    private Queue<Connection> pool = new LinkedBlockingDeque<>();
     private int POOL_SIZE = 10;
 
     @SneakyThrows
